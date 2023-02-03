@@ -8,7 +8,7 @@ public class configWithAnnotations1 {
 
 //        Cat myCat = context.getBean("cat", Cat.class);
 //        myCat.Say();
-        Person person = context.getBean("personBean", Person.class);
+        Person person = context.getBean("person", Person.class);
         person.CallYourPet();
 
         context.close();

@@ -1,11 +1,13 @@
 package com.ruavsva.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
-@Component("personBean")
+@Component
 public class Person {
-   //@Autowired
+    @Autowired
+    @Qualifier("dog")
     private Pet pet;
     private String surname;
     private int age;
@@ -27,8 +29,9 @@ public class Person {
         System.out.println("Class Person: Set age");
         this.age = age;
     }
-     @Autowired
-        public Person(Pet pet) {
+//    @Autowired
+//    @Qualifier("cat")
+    public Person(Pet pet) {
         System.out.println("Person bean is created");
         this.pet = pet;
     }
@@ -38,7 +41,8 @@ public class Person {
 //        System.out.println("Person bean is created");
 //    }
     //pet ->setPet
-    //@Autowired
+//    @Autowired
+//    @Qualifier("cat")
     public void setPet(Pet pet){
         System.out.println("Class person: set Pet");
         this.pet = pet;
