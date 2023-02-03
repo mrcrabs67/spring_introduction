@@ -2,14 +2,17 @@ package com.ruavsva.spring;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class Person {
-    @Autowired
-    @Qualifier("dog")
+    //@Autowired
+    //@Qualifier("dog")
     private Pet pet;
+    @Value("${person.surname}")
     private String surname;
+    @Value("${person.age}")
     private int age;
 
     public String getSurname() {
@@ -29,9 +32,9 @@ public class Person {
         System.out.println("Class Person: Set age");
         this.age = age;
     }
-//    @Autowired
+    @Autowired
 //    @Qualifier("cat")
-    public Person(Pet pet) {
+    public Person(@Qualifier("dog") Pet pet) {
         System.out.println("Person bean is created");
         this.pet = pet;
     }
