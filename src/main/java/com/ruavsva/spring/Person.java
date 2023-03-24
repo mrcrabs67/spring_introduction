@@ -10,9 +10,9 @@ public class Person {
     //@Autowired
     //@Qualifier("dog")
     private Pet pet;
-    @Value("${person.surname}")
+//    @Value("${person.surname}")
     private String surname;
-    @Value("${person.age}")
+//    @Value("${person.age}")
     private int age;
 
     public String getSurname() {
@@ -34,7 +34,7 @@ public class Person {
     }
     @Autowired
 //    @Qualifier("cat")
-    public Person(@Qualifier("dog") Pet pet) {
+    public Person(@Qualifier("dog")  Pet pet) {
         System.out.println("Person bean is created");
         this.pet = pet;
     }
