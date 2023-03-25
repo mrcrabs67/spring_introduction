@@ -28,14 +28,14 @@ public class Dog implements Pet{
         System.out.println("Bow-Wow");
     }
 
-    @PostConstruct
-    protected void init() {
-        System.out.println("Class dog: init");
-    }
-
-    @PreDestroy
-    protected void destroy(){
-        System.out.println("Class dog: destroy");
-    }
+//    @PostConstruct
+//    protected void init() {
+//        System.out.println("Class dog: init");
+//    }
+//
+//    @PreDestroy
+//    protected void destroy(){
+//        System.out.println("Class dog: destroy");
+//    }
 
 }
