@@ -1,11 +1,9 @@
 package com.ruavsva.spring;
 
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Scope;
+import org.springframework.context.annotation.*;
 
 @Configuration
+@PropertySource("classpath:myApp.properties")
 //@ComponentScan("com.ruavsva.spring")
 public class MyConfig {
     @Bean
@@ -18,4 +16,6 @@ public class MyConfig {
     public Person personBean(){
         return new Person(catBean());
     }
+
+
 }
